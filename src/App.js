@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.css'
 
-function App() {
+import GetTeams from './views/productTitle'
+import NavBarMenu from './nav/nav'
+import CardsList from './views/cardsProducts'
+import FooterView from './views/Footer_view'
+
+// import SliderContent from './views/sliderContent'
+
+function App () {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='App'>
+      <NavBarMenu />
+      <div className='row'>
+        <div className='col-md-2 mt-3'>
+          <GetTeams />
+        </div>
+        <div className='col-md-10 mt-3'>
+          <CardsList />
+        </div>
+      </div>
+      <FooterView />
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
