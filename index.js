@@ -9,7 +9,7 @@ app.use(cors({
   methods: ['*']
 }))
 
-app.get('/', (req, res) => res.send('Hello World!'))
+app.get('/', (req, res) => res.send('Basic Store web'))
 
 app.get('/teams', (req, res) => {
   axios.get('https://fakestoreapi.com/products').then(response => {

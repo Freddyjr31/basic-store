@@ -62,7 +62,7 @@ export default function MultiActionAreaCard () {
           <>
             <div className='row'>
               <div className='col'>
-                <Box sx={{ width: 800 }}>
+                <Box sx={{ width: 300 }}>
                   <Skeleton />
                   <Skeleton animation='wave' />
                   <Skeleton animation={false} />
@@ -71,7 +71,7 @@ export default function MultiActionAreaCard () {
             </div>
             <div className='row mt-2'>
               <div className='col'>
-                <Box sx={{ width: 800 }}>
+                <Box sx={{ width: 300 }}>
                   <Skeleton />
                   <Skeleton animation='wave' />
                   <Skeleton animation={false} />
@@ -80,7 +80,7 @@ export default function MultiActionAreaCard () {
             </div>
             <div className='row mt-2'>
               <div className='col'>
-                <Box sx={{ width: 800 }}>
+                <Box sx={{ width: 300 }}>
                   <Skeleton />
                   <Skeleton animation='wave' />
                   <Skeleton animation={false} />

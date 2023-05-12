@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react'
 import GetAllCategories from '../services/products/getAllCategories'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.bundle.min'
+import '../assets/styles/sticky.css'
 import { Link } from 'react-router-dom'
 
 export default function Listproduct () {
@@ -23,10 +24,10 @@ export default function Listproduct () {
   }, [])
 
   return (
-    <div className='col'>
+    <div className='col stickyPosition'>
       {itemsList === true
         ? (
-          <div className='col-md ms-2 border-dark-subtle border-end'>
+          <div className='col-md ms-2 border-dark-subtle border-end '>
             <h6 className='text-center'>categories</h6>
             <ul className='rounded list-unstyled'>
               {products.map((e) =>
