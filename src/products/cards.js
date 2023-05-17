@@ -7,16 +7,21 @@ import Box from '@mui/material/Box'
 import '../assets/styles/styles.css'
 import '../assets/styles/Buttons.css'
 import { Link } from 'react-router-dom'
+import Paginations from '../assets/pagination/pagination'
 
 export default function MultiActionAreaCard () {
   const [data, setData] = useState({})
   const [status, setStatus] = useState(false)
+  const [page, setPage] = useState(1)
+  // eslint-disable-next-line no-unused-vars
+  const [productsPerPage, setproductsPerPage] = useState(6)
+  const LastIndex = page * productsPerPage
+  const FirstIndex = LastIndex - productsPerPage
 
   useEffect(() => {
     setTimeout(() => {
       getAllproducts().then(
         (e) => {
-          // console.log(e);
           setData(e)
           setStatus(true)
         }
@@ -56,7 +61,7 @@ export default function MultiActionAreaCard () {
                   </div>
                 </div>
               </div>
-            )
+            ).slice(FirstIndex, LastIndex)
           )
         : (
           <>
@@ -89,6 +94,7 @@ export default function MultiActionAreaCard () {
             </div>
           </>
           )}
+      <Paginations productsPerPage={productsPerPage} page={page} setPage={setPage} totalProducts={data.length} />
     </>
   )
 }

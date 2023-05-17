@@ -11,7 +11,7 @@ app.use(cors({
 
 app.get('/', (req, res) => res.send('Basic Store web'))
 
-app.get('/teams', (req, res) => {
+app.get('/products', (req, res) => {
   axios.get('https://fakestoreapi.com/products').then(response => {
     const data = response.data
     res.json(data)
