@@ -2,7 +2,7 @@ const express = require('express')
 const axios = require('axios')
 const cors = require('cors')
 const app = express()
-const port = 3000
+const port = 2000
 
 app.use(cors({
   origin: '*',
@@ -27,6 +27,17 @@ app.get('/categories', (req, res) => {
   }).catch(error => (
     console.log(error)
   ))
+})
+
+app.post('/categories/:product_categorie', (req, res) => {
+  const productCategorie = req.params.product_categorie
+  console.log(productCategorie)
+  axios.get(`https://fakestoreapi.com/products/category/${productCategorie}`).then(response => {
+    const productInCategory = response.data
+    res.json(productInCategory)
+  }).catch(error => {
+    console.log(error)
+  })
 })
 
 app.listen(port, () => console.log(`app listening on port ${port}!`))

@@ -14,7 +14,7 @@ export default function MultiActionAreaCard () {
   const [status, setStatus] = useState(false)
   const [page, setPage] = useState(1)
   // eslint-disable-next-line no-unused-vars
-  const [productsPerPage, setproductsPerPage] = useState(6)
+  const [productsPerPage, setproductsPerPage] = useState(5)
   const LastIndex = page * productsPerPage
   const FirstIndex = LastIndex - productsPerPage
 
@@ -35,7 +35,7 @@ export default function MultiActionAreaCard () {
       {status
         ? (
             data.map((e) =>
-              <div className='card border-0 shadow ms-2 mb-2'>
+              <div className='card border-0 shadow mx-2 mb-2'>
                 <div className='row align-items-center'>
                   <div className='col-md-3 divImgCard'>
                     <img src={e.image} className='img-fluid pt-2 pb-2 m-3 imgCard' style={{ maxHeight: '150px' }} alt={e.title} />

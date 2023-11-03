@@ -9,7 +9,7 @@ function App () {
   return (
     <div className='App'>
       <NavBarMenu />
-      <div className='row mt-5'>
+      <div className='row mt-5 me-0'>
         <div className='col-md-2 mt-5'>
           <GetTeams />
         </div>

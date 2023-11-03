@@ -5,6 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.bundle.min'
 import '../assets/styles/sticky.css'
 import { Link } from 'react-router-dom'
+import { getPorductInCategory } from '../services/products/getPorductInCategory'
 
 export default function Listproduct () {
   const [products, setProduct] = useState({})
@@ -15,6 +16,9 @@ export default function Listproduct () {
   useEffect(() => {
     setLoading(true)
     setTimeout(() => {
+      getPorductInCategory({ product: 'jewelery' }).then((products) => {
+        console.log(products)
+      })
       GetAllCategories().then((products) => {
         setProduct(products)
         setItemsList(true)

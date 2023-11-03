@@ -6,8 +6,8 @@ import '../assets/styles/footer.css'
 
 export default function FooterPage () {
   return (
-    <footer className='m-0 '>
-      <div className='container-fluid mb-0  '>
+    <footer className='mx-0'>
+      <div className='container-fluid mb-0'>
         <div className='row justify-content-between footerPage2 pt-3 pb-0'>
           <div className='col-md'>
             <div className='input-group mb-2'>
